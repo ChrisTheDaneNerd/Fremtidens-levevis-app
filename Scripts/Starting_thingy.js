@@ -42,13 +42,13 @@ function piechart() {
 
     
     //omregner talene til procenter
-    sumkoel= (numkoel/num1)*100;
-    sumkom= (numkom/num1)*100;
-    sumovn= (numovn/num1)*100;
-    summik= (nummik/num1)*100;
-    sumvas= (numvas/num1)*100; 
-    sumtoer= (numtoer/num1)*100; 
-    sumopv= (numopv/num1)*100; 
+    sumkoel= (numkoel/numOne)*100;
+    sumkom= (numkom/numOne)*100;
+    sumovn= (numovn/numOne)*100;
+    summik= (nummik/numOne)*100;
+    sumvas= (numvas/numOne)*100; 
+    sumtoer= (numtoer/numOne)*100; 
+    sumopv= (numopv/numOne)*100; 
 
     //opstart på at lave cirkel diagrammet
     var chart = new CanvasJS.Chart("chartContainer", {
