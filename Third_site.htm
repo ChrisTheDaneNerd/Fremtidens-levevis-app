@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Scripts/Tabel.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <link rel="stylesheet" href="Styling/Third_styling.css">
+    <title>Document</title>     
+</head>
+<body>
+    
+    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+<script>
+var xValues = ["værk over 100 MW", "mindre anlæg under 100 MW", "vindmøller", "solceller"];
+var yValues = [26.35, 13.66, 39.53, 20.46, 100];
+var barColors = ["red", "green","blue","orange"];
+
+new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "Grøn energi mængde per måned"
+    }
+  }
+});
+</script>
+</body>
+</html>
