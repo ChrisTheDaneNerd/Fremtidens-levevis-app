@@ -29,30 +29,30 @@ function piechart() {
     var numkoel = 0, numkom = 0, numovn = 0, nummik = 0, numvas = 0, numtoer = 0, numopv = 0;
     var tidkom = 0, tidovn = 0, tidmik = 0, tidvas = 0, tidtoer = 0, tidopv = 0;
     //ændrer bruger inputtet til integer
-    numkoel = parseInt(document.getElementById("Køle").value);
-    numkom = parseInt(document.getElementById("Komfur").value);
-    tidkom = parseInt(document.getElementById("Komfur-tid").value);
-    numovn = parseInt(document.getElementById("Ovn").value);
-    tidovn = parseInt(document.getElementById("Ovn-tid").value);
-    nummik = parseInt(document.getElementById("Mikroovn").value);
-    tidmik = parseInt(document.getElementById("Mikro-tid").value);
-    numvas = parseInt(document.getElementById("Vaskemaskine").value);
-    tidvas = parseInt(document.getElementById("Vask-tid").value);
-    numtoer = parseInt(document.getElementById("Tørretumbler").value);
-    tidtoer = parseInt(document.getElementById("Tørre-tid").value);
-    numopv = parseInt(document.getElementById("Opvaskemaskine").value);
-    tidopv = parseInt(document.getElementById("Opvask-tid").value);
+    numkoel = parseFloat(document.getElementById("Køle").value);
+    numkom = parseFloat(document.getElementById("Komfur").value);
+    tidkom = parseFloat(document.getElementById("Komfur-tid").value);
+    numovn = parseFloat(document.getElementById("Ovn").value);
+    tidovn = parseFloat(document.getElementById("Ovn-tid").value);
+    nummik = parseFloat(document.getElementById("Mikroovn").value);
+    tidmik = parseFloat(document.getElementById("Mikro-tid").value);
+    numvas = parseFloat(document.getElementById("Vaskemaskine").value);
+    tidvas = parseFloat(document.getElementById("Vask-tid").value);
+    numtoer = parseFloat(document.getElementById("Tørretumbler").value);
+    tidtoer = parseFloat(document.getElementById("Tørre-tid").value);
+    numopv = parseFloat(document.getElementById("Opvaskemaskine").value);
+    tidopv = parseFloat(document.getElementById("Opvask-tid").value);
 
 
     
     //omregner talene til procenter
     sumkoel= ((numkoel/numOne)/12)*100;
     sumkom= (((numkom*tidkom)*30)/numOne)*100;
-    sumovn= (((numovn*tidovn)*30)/numOne)*100;
+    sumovn= (((numovn*tidovn)*4)/numOne)*100;
     summik= (((nummik*tidmik)*30)/numOne)*100;
-    sumvas= ((((numvas/100)*tidvas)*30)/numOne)*100; 
-    sumtoer= ((((numtoer/100)*tidtoer)*30)/numOne)*100; 
-    sumopv= ((((numopv/100)*tidopv)*30)/numOne)*100; 
+    sumvas= ((((numvas/100)*tidvas)*4)/numOne)*100; 
+    sumtoer= ((((numtoer/100)*tidtoer)*4)/numOne)*100; 
+    sumopv= ((((numopv/100)*tidopv)*4)/numOne)*100; 
 
     console.log(sumkoel,sumkom,sumovn,summik,sumvas,sumtoer,sumopv);
 
@@ -62,7 +62,7 @@ function piechart() {
     var chart = new CanvasJS.Chart("chartContainer", {
         animationEnabled: true,
         title: {
-            text: "EL fordeling af hvidevare på årligt forbrug af  " + numOne + " kWh"
+            text: "EL fordeling af hvidevare på månedligt forbrug af  " + numOne + " kWh"
         },
         data: [{
             //sætter de forskellige variabler til diagrammet
