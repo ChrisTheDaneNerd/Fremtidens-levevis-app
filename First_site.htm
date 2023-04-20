@@ -13,10 +13,49 @@
 <h3 style="font-size:20px;">velkommen</h3>
 
 <!--input til function multi() som regner ud hvad prisen måske ville være-->
-<p>kWh pr år:  <input id="first"></p>
-<p>Din projekteret EL regning: </p><button onclick="multi()"> Udregn </button>
+<p>kWh pr måned (check din EL regning):  <input id="first"></p>
+</br>
+<h4>Din projekteret EL regning: </h4>
 
 <p>Gennemsnits pris indtil vidre: <input id="answer">kr.</p>
+<p>Gennemsnit udledning ved dette forbrug: <input id="CO2">kg</p>
+
+
+
+<h1>Fordeling af hvidvare på deres EL-forbrug i procenter</h1>
+
+<h2>Hvor meget strøm bruger dine hvidevare enten om året eller pr. 100 sykluser?</h2>
+<h3>Skriv 0 ved dem som du ikke ejer</h3>
+<h4>Skriv helst i nærmeste hel tal</h4>
+
+<!--Bruger input til de forskellige data der skal bruges i Starting_thingy.js - function piechart()-->
+<p>Køleskab/køle fryserskab: <input id="Køle"> kWh</p>
+<br>
+<P>El-Komfur: <input id="Komfur"> kWh</P>
+<p>    &rarr; Hvor lang tid bruger du det om ugen?: <input id="Komfur-tid"></p>
+<br>
+<P>Ovn: <input id="Ovn"> kWh</P>
+<p>    &rarr; Hvor lang tid bruger du det om ugen?: <input id="Ovn-tid"></p>
+<br>
+<P>Mikroovn: <input id="Mikroovn"> kWh</P>
+<p>    &rarr; Hvor lang tid bruger du det om ugen?: <input id="Mikro-tid"></p>
+<br>
+<P>Vaskemaskine: <input id="Vaskemaskine"> kWh</P>
+<p>    &rarr; Hvor mange gange bruger du det om ugen?: <input id="Vask-tid"></p>
+<br>
+<P>Tørretumbler: <input id="Tørretumbler"> kWh</P>
+<p>    &rarr; Hvor mange gange bruger du det om ugen?: <input id="Tørre-tid"></p>
+<br>
+<P>Opvaskemaskine: <input id="Opvaskemaskine"> kWh</P>
+<p>    &rarr; Hvor mange gange bruger du det om ugen?: <input id="Opvask-tid"></p>
+<br>
+
+<!--Knap så programmet ved at den skal lave et piechart-->
+<p>Når du har indtastet tryk på knappen nå du er færdig</p>
+<button onclick="piechart()">charty</button>
+<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<div style="margin-top:16px;color:dimgrey;font-size:9px;font-family: Verdana, Arial, Helvetica, sans-serif;text-decoration:none;"></div>
     
 </body>
 </html>
