@@ -12,8 +12,8 @@ function piechart() {
     numThree = 0.124;
     sum = numOne * numTwo;
     CO2sum = numOne * numThree;
-    document.getElementById("answer").value = sum.toFixed(2);
-    document.getElementById("CO2").value = CO2sum.toFixed(2);
+    document.getElementById("answer").innerHTML = sum.toFixed(2);
+    document.getElementById("CO2").innerHTML = CO2sum.toFixed(2);
 
     
     Elforbrug.push(numOne);
@@ -89,6 +89,3 @@ function piechart() {
     }
     
  
-
-
-
