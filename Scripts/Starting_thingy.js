@@ -46,7 +46,7 @@ function piechart() {
 
     
     //omregner talene til procenter
-    sumkoel= ((numkoel/numOne)*30)*100;
+    sumkoel= ((numkoel/numOne)/12)*100;
     sumkom= (((numkom*tidkom)*30)/numOne)*100;
     sumovn= (((numovn*tidovn)*30)/numOne)*100;
     summik= (((nummik*tidmik)*30)/numOne)*100;
