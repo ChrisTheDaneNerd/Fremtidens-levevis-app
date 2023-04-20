@@ -46,13 +46,13 @@ function piechart() {
 
     
     //omregner talene til procenter
-    sumkoel= (numkoel/numOne)*100;
-    sumkom= (((numkom*tidkom)*7)/numOne)*100;
-    sumovn= (((numovn*tidovn)*7)/numOne)*100;
-    summik= (((nummik*tidmik)*7)/numOne)*100;
-    sumvas= (((numvas/100)*tidvas)/numOne)*100; 
-    sumtoer= (((numtoer/100)*tidtoer)/numOne)*100; 
-    sumopv= (((numopv/100)*tidopv)/numOne)*100; 
+    sumkoel= ((numkoel/numOne)*30)*100;
+    sumkom= (((numkom*tidkom)*30)/numOne)*100;
+    sumovn= (((numovn*tidovn)*30)/numOne)*100;
+    summik= (((nummik*tidmik)*30)/numOne)*100;
+    sumvas= ((((numvas/100)*tidvas)*30)/numOne)*100; 
+    sumtoer= ((((numtoer/100)*tidtoer)*30)/numOne)*100; 
+    sumopv= ((((numopv/100)*tidopv)*30)/numOne)*100; 
 
     console.log(sumkoel,sumkom,sumovn,summik,sumvas,sumtoer,sumopv);
 
