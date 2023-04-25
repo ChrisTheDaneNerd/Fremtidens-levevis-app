@@ -10,8 +10,16 @@
     <title>Document</title>     
 </head>
 <body>
+
+  <div class="header">
+<h1>Header</h1>
+  </div>
+  <ul>
+    <li><a href="First_site.htm">EL-omregning</a></li>
+    <li><a href="Second_site.htm">Grøn EL</a></li>
+  </ul>
     
-    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+    <canvas id="myChart" style="width:100%;max-width:600px;"></canvas>
 
 <script>
 var xValues = ["værk over 100 MW", "mindre anlæg under 100 MW", "vindmøller", "solceller"];
@@ -36,8 +44,10 @@ new Chart("myChart", {
   }
 });
 </script>
+<div class="container">
 <div class="controls">
-  <button onclick="Percent()">I WANT THE POWER!</button>
+  <button onclick="Percent()">Vis mig produktionen nu</button>
+</div>
 </div>
 <p>Grønenergi produktion lige nu: <input id="grun">% &#9728; </p>
 
